@@ -20,14 +20,14 @@ contract Counter{
     //Below is the format for defining functions in contracts
     //There are other modifiers besides public
     //This is a read function and it is free
-    function getCount() public view return (uint){
+    function getCount() public view returns (uint){
         return count;
     }
 
     //Below is a write function
     //Unlike the read function above, this one has the ability to change the blockchain..
     //Hence, you have to pay gas whenever it is called
-    function incrementCount() {
+    function incrementCount() public {
         count = count + 1;
     }
 }

@@ -24,7 +24,7 @@ contract MyContract {
         uint256 myUint256;
         string myString;
     }
-    MyStruct public myStruct = MyStruct(1, "Hello, World!")
+    MyStruct public myStruct = MyStruct(1, "Hello, World!");
 
 
     //Local variables are variables defined in a function. They can only be assesed in that function.

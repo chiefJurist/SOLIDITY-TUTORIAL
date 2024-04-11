@@ -8,17 +8,18 @@ contract MyContract{
     uint[] public numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     //Making the functions below not to be mutable
+    //This is a ownable smart contract and makes the caller have certain priviledges
     address public owner;
     constructor() {
-        owner = msg.sender
+        owner = msg.sender;
     }
 
     //Function with if statement
-    function isEvenNumber(uint _number) public view returns(bool) {
+    function isEvenNumber(uint _number) public pure returns(bool) {
         if (_number % 2 == 0) {
             return true;
         } else {
-            return false
+            return false;
         }
     }
 
@@ -27,13 +28,14 @@ contract MyContract{
         uint count = 0;
         for (uint256 i = 0; i < numbers.length; i++) {
             if (isEvenNumber(number[i])) {
-                count++
+                count++;
             }
         }
+        return count;
     }
 
-    //Function for preventing mutation
+    //Function for preventing mutation by checking if the current address is the owner
     function isOwner() public view returns(bool) {
-        
+        return(msg.sender == owner);
     }
 }

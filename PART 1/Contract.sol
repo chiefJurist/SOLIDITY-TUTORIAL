@@ -10,7 +10,7 @@ contract Counter{
     //Unsigned integers (uint) are integers that can't have a sign (eg. -1, *2 etc.). They can only be positive. (eg. 1, 2, 4 etc)
 
     //A constructor is a special function for each smart contract that runs once
-    //(when the contract is deployed to the blochchain)
+    //(when the contract is deployed to the blockchain)
     //We have to make it public so it can be called whenever the contract is initialized
     constructor() public {
         count = 0;

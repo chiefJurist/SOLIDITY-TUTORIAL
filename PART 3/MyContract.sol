@@ -31,6 +31,7 @@ contract MyContract{
     //Creating A mapping nested in another mapping
     mapping(address => mapping (uint => Book)) public myBooks;
     function addMyBook(uint _id, string memory _title, string memory _author) public {
+        //msg.sender is the person calling the contract
         myBooks[msg.sender][_id] = Book(_title, _author);
     }
 }

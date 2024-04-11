@@ -26,7 +26,7 @@ contract HotelRoom {
 
     //See how we used the payable modifier too
     function book() payable {
-        //The require statement checks the validityof a statement before it continues to other kines of v
+        //The require statement checks the validity of a statement before it continues to other lines
         require(currentStatus == Statuses.vacant, "Currently Occupied");
 
         //Check Price
